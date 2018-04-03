@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+    <title>Anytimes</title>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="x-ua-compatible">
+    <meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width, minimal-ui" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" media="all" rel="stylesheet" type="text/css">
+    <link rel="icon" href="img/anytimes.ico">
+    <!-- Styles -->
+    <link href="css/keyframes.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <link href="css/swiper.css" rel="stylesheet" type="text/css">
+    <link href="css/swipebox.min.css" rel="stylesheet" type="text/css">
+    <link href="css/anytimes.css" rel="stylesheet" type="text/css">  
+</head>
+
+<body class="cardBG">
+<div class="m-scene" id="main"> <!-- Main Container -->
+    <!-- Sidebars -->
+    <!-- Right Sidebar -->
+    <ul id="slide-out" class="side-nav">
+        <li>
+        <!-- Srearch bar -->
+            <nav class="side-active-color">
+                <div class="nav-wrapper">
+                    <form>
+                        <div class="input-field">
+                            <input id="search" type="search" class="nav-search" placeholder="キーワード" required>
+                            <label for="search"><i class="material-icons">search</i></label>
+                            <i class="material-icons">clear</i>
+                        </div>
+                    </form>
+                </div>
+            </nav>
+        </li>
+        
+        <li class="p-15">
+            <!-- Side Search -->
+            <div class="side-search">
+            
+                 <h3>検索条件（順）</h3>
+                     <ul class="radio-style clearfix">
+                         <li>
+                             <input name="group1" type="radio" id="radio1" checked />
+                             <label for="radio1">更新</label>
+                         </li>
+                         <li>
+                             <input name="group1" type="radio" id="radio2" />
+                             <label for="radio2">評価</label>
+                         </li>
+                         <li>
+                             <input name="group1" type="radio" id="radio3" />
+                             <label for="radio3">お気に入り</label>
+                         </li>
+                         <li>
+                             <input name="group1" type="radio" id="radio4" />
+                             <label for="radio4">実績</label>
+                         </li>
+                     </ul>
+                     
+                 <h3>エリアでさがす</h3>
+                
+                 <div class="supportor-select input-field">
+                     <select class="input-select">
+                         <option value="" selected>すべてのエリア</option>
+                         <option value="1">東京</option>
+                         <option value="2">名古屋</option>
+                         <option value="3">大阪</option>
+                     </select>
+                 </div>
+                 
+                 <h3>性別でさがす</h3>
+                     
+                     <ul class="radio-style clearfix">
+                         <li>
+                             <input name="group-user" type="radio" id="woman-user" />
+                             <label for="woman-user">女性</label>
+                         </li>
+                         <li>
+                             <input name="group-user" type="radio" id="man-user" />
+                             <label for="man-user">男性</label>
+                         </li>
+                         <li>
+                             <input name="group-user" type="radio" id="all-user" checked />
+                             <label for="all-user">すべて</label>
+                         </li>
+                     </ul>
+                                     
+                 <div class="side-btn">   
+                     <button class="btn waves-effect waves-light text-strong primary-color btn-large" type="submit" name="action">さがす
+                         <i class="material-icons">find_replace</i>
+                     </button>
+                 </div>    
+                     
+             </div>
+             
+        </li>
+    </ul>
+    <!-- Left Sidebar -->
+    <ul id="slide-out-left" class="side-nav collapsible">
+        <li>
+            <div class="sidenav-header">
+                <div class="nav-logo">
+                    <h2><span>LIFE SHARE,</span><span> LIKE SHARE</span></h2>
+                </div>
+                <div class="nav-avatar">
+                    <a href="#"><img class="circle avatar" src="img/avatar/avatar3.jpg" alt=""></a>
+                    <div class="avatar-body">
+                        <h3>Miho Skualet</h3>
+                        <p class="star">
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star_border</i>
+                            <i class="material-icons">star_border</i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="active">
+            <div class="collapsible-header">
+                <a href="#"><i class="material-icons">mood</i> お手伝いする</a>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header">
+                <a href="#"><i class="material-icons">create</i> 頼んでみる</a>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header">
+                <a href="#"><i class="material-icons">face</i> サポーター</a>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header">
+                <i class="material-icons">person_pin</i> マイページ 
+            </div>
+            <div class="collapsible-body">
+                <ul class="collapsible">
+                    <li>
+                        <a href="#"><i class="material-icons">fiber_manual_record</i> 進行中</a>
+                        <a href="#"><i class="material-icons">fiber_manual_record</i> お気に入り</a>
+                        <a href="#"><i class="material-icons">fiber_manual_record</i> 終了</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header">
+                <a href="#"><i class="material-icons">chat</i> メッセージ <span class="new badge">24</span></a>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header">
+                <i class="material-icons">more_horiz</i> その他の機能 
+            </div>
+            <div class="collapsible-body">
+                <ul class="collapsible">
+                    <li>
+                        <a href="#"><i class="material-icons">fiber_manual_record</i> プロフィール編集</a>
+                        <a href="#"><i class="material-icons">fiber_manual_record</i> 身分証明書提出</a>
+                        <a href="#"><i class="material-icons">fiber_manual_record</i> 報酬支払い申請</a>
+                        <a href="#"><i class="material-icons">fiber_manual_record</i> 銀行口座情報登録</a>
+                        <a href="#"><i class="material-icons">fiber_manual_record</i> 報酬支払い申請</a>
+                        <a href="#"><i class="material-icons">fiber_manual_record</i> 報酬受取履歴</a>
+                        <a href="#"><i class="material-icons">fiber_manual_record</i> 支払い履歴</a>
+                        <a href="#"><i class="material-icons">fiber_manual_record</i> パスワード変更</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header">
+                <i class="material-icons">help</i> サービスについて 
+            </div>
+            <div class="collapsible-body">
+                <ul class="collapsible">
+                    <li>
+                        <a href="#"><i class="material-icons">fiber_manual_record</i> 問い合わせ・ご意見</a>
+                        <a href="#"><i class="material-icons">fiber_manual_record</i> 利用規約</a>
+                        <a href="#"><i class="material-icons">fiber_manual_record</i> 個人情報保護方針</a>
+                        <a href="#"><i class="material-icons">fiber_manual_record</i> 特別商取引表記</a>
+                        <a href="#"><i class="material-icons">fiber_manual_record</i> 報酬支払い申請</a>
+                        <a href="#"><i class="material-icons">fiber_manual_record</i> 退会</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header">
+                 
+            </div>
+        </li>
+    </ul>
+    <!-- End of Sidebars -->
+
+    <!------------m^^m------------ Page Content ------------o^^o------------>
+    <div id="content" class="">
+        <!------------m^^m------------ Header Top------------o^^o------------>
+        <header id="" class="primary-color z-depth-1 toolbar-move">
+            <div class="open-left" id="open-left" data-activates="slide-out-left">
+                <i class="material-icons">menu</i>
+            </div>
+            <div class="header-title center">サポーター</div>
+            <div class="open-right header-icon" id="open-right" data-activates="slide-out">
+                <i class="material-icons">search</i>
+            </div>
+            <div class="navbar-fixed">
+                <ul class="tabs">
+                    <li class="tab"><a class="active" href="#step1">すべて</a></li>
+                    <li class="tab"><a href="#step2">プチ相談</a></li>
+                    <li class="tab"><a href="#step3">家事</a></li>
+                    <li class="tab"><a href="#step4">組立・修理</a></li>
+                    <li class="tab"><a href="#step5">ペット</a></li>
+                    <li class="tab"><a href="#step6">子供・高齢者</a></li>
+                    <li class="tab"><a href="#step7">レッスン</a></li>
+                    <li class="tab"><a href="#step8">その他</a></li>
+                </ul>
+            </div>
+  
+        </header>
+    
+        
+        <!-- List Top -->
+        <div class="list-move animated fadeinup">
+        
+            <!-- User List(1) -->
+            <div id="step1" class="list-user">
+                    
+                    <div class="grid-item gallery-item-card animated fadeinup delay-1">
+                        <a href="#">
+                            <div class="card-div clearfix">
+                                <p class="card-img"><a href="#profile" class="modal-trigger"><img src="img/avatar/avatar4.jpg" class="avatar-card circle" alt=""></a></p>
+                                <p class="card-name">I am a boy, my name is yoh! just test nick name!</p>
+                                <div class="star-list">
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star_border</i>
+                                </div>
+                                <ul class="clearfix skill-box">
+                                    <li>プチ相談</li>
+                                    <li>恋愛相談</li>
+                                    <li>人生相談</li>
+                                    <li>レッスン</li>
+                                    <li>家事</li>
+                                    <li>ペット</li>
+                                </ul>
+                            </div>
+                            <div class="supportor-box-footer">
+                                <div class="counter clearfix">
+                                    <div class="pull-left lt-at"><i class="material-icons left-ico">face</i> 
+                                        <span class="data-at"><span class="data-count">122</span></span>
+                                    </div>
+                                    <div class="pull-right rt-at"><a href="#"><i class="material-icons right-ico">favorite_border</i></a>
+                                        <span class="data-at"><span class="data-count">241</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="grid-item gallery-item-card animated fadeinup delay-1">
+                        <a href="#">
+                            <div class="card-div clearfix">
+                            
+                                <p class="card-img"><a href="A.html"><img src="img/avatar/avatar1.jpg" class="avatar-card circle" alt=""></a></p>
+                                <p class="card-name">ヒョノです</p>
+                                <div class="star-list">
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star_border</i>
+                                </div>
+                                <ul class="clearfix skill-box">
+                                    <li>プチ相談</li>
+                                    <li>恋愛相談</li>
+                                    <li>人生相談</li>
+                                    <li>レッスン</li>
+                                    <li>家事</li>
+                                    <li>ペット</li>
+                                </ul>
+                            
+                            </div>
+                            <div class="supportor-box-footer">
+                                <div class="counter clearfix">
+                                    <div class="pull-left lt-at"><i class="material-icons left-ico">face</i> 
+                                        <span class="data-at"><span class="data-count">122</span></span>
+                                    </div>
+                                    <div class="pull-right rt-at"><a href="#"><i class="material-icons right-ico">favorite_border</i></a>
+                                        <span class="data-at"><span class="data-count">241</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="grid-item gallery-item-card animated fadeinup delay-2">
+                        <a href="#">
+                            <div class="card-div clearfix">
+                                <p class="card-img"><a href="#"><img src="img/avatar/avatar2.jpg" class="avatar-card circle" alt=""></a></p>
+                                <p class="card-name">I am a girl</p>
+                                <div class="star-list">
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star_border</i>
+                                </div>
+                                <ul class="clearfix skill-box">
+                                    <li>プチ相談</li>
+                                    <li>恋愛相談</li>
+                                    <li>人生相談</li>
+                                    <li>レッスン</li>
+                                    <li>家事</li>
+                                    <li>ペット</li>
+                                </ul>
+                            </div>
+                            <div class="supportor-box-footer">
+                                <div class="counter clearfix">
+                                    <div class="pull-left lt-at"><i class="material-icons left-ico">face</i> 
+                                        <span class="data-at"><span class="data-count">122</span></span>
+                                    </div>
+                                    <div class="pull-right rt-at"><a href="#"><i class="material-icons right-ico">favorite</i></a>
+                                        <span class="data-at"><span class="data-count">241</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="grid-item gallery-item-card animated fadeinup delay-2">
+                        <a href="#">
+                            <div class="card-div clearfix">
+                                <p class="card-img"><a href="#"><img src="img/avatar/avatar3.jpg" class="avatar-card circle" alt=""></a></p>
+                                <p class="card-name">Miho</p>
+                                <div class="star-list">
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star_border</i>
+                                </div>
+                                <ul class="clearfix skill-box">
+                                    <li>プチ相談</li>
+                                    <li>恋愛相談</li>
+                                    <li>人生相談</li>
+                                    <li>レッスン</li>
+                                    <li>家事</li>
+                                    <li>ペット</li>
+                                </ul>
+                            </div>
+                            <div class="supportor-box-footer">
+                                <div class="counter clearfix">
+                                    <div class="pull-left lt-at"><i class="material-icons left-ico">face</i> 
+                                        <span class="data-at"><span class="data-count">122</span></span>
+                                    </div>
+                                    <div class="pull-right rt-at"><a href="#"><i class="material-icons right-ico">favorite_border</i></a>
+                                        <span class="data-at"><span class="data-count">241</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="grid-item gallery-item-card animated fadeinup delay-3">
+                        <a href="#">
+                            <div class="card-div clearfix">
+                                <p class="card-img"><a href="#"><img src="img/avatar/avatar4.jpg" class="avatar-card circle" alt=""></a></p>
+                                <p class="card-name">I am a boy, my name is yoh! just test nick name!</p>
+                                <div class="star-list">
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star_border</i>
+                                </div>
+                                <ul class="clearfix skill-box">
+                                    <li>プチ相談</li>
+                                    <li>恋愛相談</li>
+                                    <li>人生相談</li>
+                                    <li>レッスン</li>
+                                    <li>家事</li>
+                                    <li>ペット</li>
+                                </ul>
+                            </div>
+                            <div class="supportor-box-footer">
+                                <div class="counter clearfix">
+                                    <div class="pull-left lt-at"><i class="material-icons left-ico">face</i> 
+                                        <span class="data-at"><span class="data-count">122</span></span>
+                                    </div>
+                                    <div class="pull-right rt-at"><a href="#"><i class="material-icons right-ico">favorite_border</i></a>
+                                        <span class="data-at"><span class="data-count">241</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="grid-item gallery-item-card animated fadeinup delay-3">
+                        <a href="#">
+                            <div class="card-div clearfix">
+                                <p class="card-img"><a href="#"><img src="img/avatar/avatar1.jpg" class="avatar-card circle" alt=""></a></p>
+                                <p class="card-name">ヒョノです</p>
+                                <div class="star-list">
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star_border</i>
+                                </div>
+                                <ul class="clearfix skill-box">
+                                    <li>プチ相談</li>
+                                    <li>恋愛相談</li>
+                                    <li>人生相談</li>
+                                    <li>レッスン</li>
+                                    <li>家事</li>
+                                    <li>ペット</li>
+                                </ul>
+                            </div>
+                            <div class="supportor-box-footer">
+                                <div class="counter clearfix">
+                                    <div class="pull-left lt-at"><i class="material-icons left-ico">face</i> 
+                                        <span class="data-at"><span class="data-count">122</span></span>
+                                    </div>
+                                    <div class="pull-right rt-at"><a href="#"><i class="material-icons right-ico">favorite_border</i></a>
+                                        <span class="data-at"><span class="data-count">241</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="grid-item gallery-item-card animated fadeinup delay-4">
+                        <a href="#">
+                            <div class="card-div clearfix">
+                                <p class="card-img"><a href="#"><img src="img/avatar/avatar2.jpg" class="avatar-card circle" alt=""></a></p>
+                                <p class="card-name">I am a girl</p>
+                                <div class="star-list">
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star_border</i>
+                                </div>
+                                <ul class="clearfix skill-box">
+                                    <li>プチ相談</li>
+                                    <li>恋愛相談</li>
+                                    <li>人生相談</li>
+                                    <li>レッスン</li>
+                                    <li>家事</li>
+                                    <li>ペット</li>
+                                </ul>
+                            </div>
+                            <div class="supportor-box-footer">
+                                <div class="counter clearfix">
+                                    <div class="pull-left lt-at"><i class="material-icons left-ico">face</i> 
+                                        <span class="data-at"><span class="data-count">122</span></span>
+                                    </div>
+                                    <div class="pull-right rt-at"><a href="#"><i class="material-icons right-ico">favorite</i></a>
+                                        <span class="data-at"><span class="data-count">241</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="grid-item gallery-item-card animated fadeinup delay-4">
+                        <a href="#">
+                            <div class="card-div clearfix">
+                                <p class="card-img"><img src="img/avatar/avatar3.jpg" class="avatar-card circle" alt=""></p>
+                                <p class="card-name">Miho</p>
+                                <div class="star-list">
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star_border</i>
+                                </div>
+                                <ul class="clearfix skill-box">
+                                    <li>プチ相談</li>
+                                    <li>恋愛相談</li>
+                                    <li>人生相談</li>
+                                    <li>レッスン</li>
+                                    <li>家事</li>
+                                    <li>ペット</li>
+                                </ul>
+                            </div>
+                            <div class="supportor-box-footer">
+                                <div class="counter clearfix">
+                                    <div class="pull-left lt-at"><i class="material-icons left-ico">face</i> 
+                                        <span class="data-at"><span class="data-count">122</span></span>
+                                    </div>
+                                    <div class="pull-right rt-at"><a href="#"><i class="material-icons right-ico">favorite_border</i></a>
+                                        <span class="data-at"><span class="data-count">241</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>                 
+            </div>
+            
+            <!-- User List(2) -->
+            <div id="step2" class="list-user">
+                    
+                    <div class="grid-item gallery-item-card animated fadeinup delay-1">
+                        <a href="#">
+                            <div class="card-div clearfix">
+                                <p class="card-img"><a href="#"><img src="img/avatar/avatar4.jpg" class="avatar-card circle" alt=""></a></p>
+                                <p class="card-name">I am a boy, my name is yoh! just test nick name!</p>
+                                <div class="star-list">
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star_border</i>
+                                </div>
+                                <ul class="clearfix skill-box">
+                                    <li>プチ相談</li>
+                                    <li>恋愛相談</li>
+                                    <li>人生相談</li>
+                                    <li>レッスン</li>
+                                    <li>家事</li>
+                                    <li>ペット</li>
+                                </ul>
+                            </div>
+                            <div class="supportor-box-footer">
+                                <div class="counter clearfix">
+                                    <div class="pull-left lt-at"><i class="material-icons left-ico">face</i> 
+                                        <span class="data-at"><span class="data-count">122</span></span>
+                                    </div>
+                                    <div class="pull-right rt-at"><a href="#"><i class="material-icons right-ico">favorite_border</i></a>
+                                        <span class="data-at"><span class="data-count">241</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="grid-item gallery-item-card animated fadeinup delay-1">
+                        <a href="#">
+                            <div class="card-div clearfix">
+                                <p class="card-img"><a href="#"><img src="img/avatar/avatar1.jpg" class="avatar-card circle" alt=""></a></p>
+                                <p class="card-name">ヒョノです</p>
+                                <div class="star-list">
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star_border</i>
+                                </div>
+                                <ul class="clearfix skill-box">
+                                    <li>プチ相談</li>
+                                    <li>恋愛相談</li>
+                                    <li>人生相談</li>
+                                    <li>レッスン</li>
+                                    <li>家事</li>
+                                    <li>ペット</li>
+                                </ul>
+                            </div>
+                            <div class="supportor-box-footer">
+                                <div class="counter clearfix">
+                                    <div class="pull-left lt-at"><i class="material-icons left-ico">face</i> 
+                                        <span class="data-at"><span class="data-count">122</span></span>
+                                    </div>
+                                    <div class="pull-right rt-at"><a href="#"><i class="material-icons right-ico">favorite_border</i></a>
+                                        <span class="data-at"><span class="data-count">241</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="grid-item gallery-item-card animated fadeinup delay-2">
+                        <a href="#">
+                            <div class="card-div clearfix">
+                                <p class="card-img"><a href="#"><img src="img/avatar/avatar2.jpg" class="avatar-card circle" alt=""></a></p>
+                                <p class="card-name">I am a girl</p>
+                                <div class="star-list">
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star_border</i>
+                                </div>
+                                <ul class="clearfix skill-box">
+                                    <li>プチ相談</li>
+                                    <li>恋愛相談</li>
+                                    <li>人生相談</li>
+                                    <li>レッスン</li>
+                                    <li>家事</li>
+                                    <li>ペット</li>
+                                </ul>
+                            </div>
+                            <div class="supportor-box-footer">
+                                <div class="counter clearfix">
+                                    <div class="pull-left lt-at"><i class="material-icons left-ico">face</i> 
+                                        <span class="data-at"><span class="data-count">122</span></span>
+                                    </div>
+                                    <div class="pull-right rt-at"><a href="#"><i class="material-icons right-ico">favorite</i></a>
+                                        <span class="data-at"><span class="data-count">241</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+            </div>
+            
+            <!-- User List(3) -->
+            <div id="step3" class="list-user">
+                    
+                    <div class="grid-item gallery-item-card animated fadeinup delay-1">
+                        <a href="#">
+                            <div class="card-div clearfix">
+                                <p class="card-img"><a href="#"><img src="img/avatar/avatar2.jpg" class="avatar-card circle" alt=""></a></p>
+                                <p class="card-name">I am a boy, my name is yoh! just test nick name!</p>
+                                <div class="star-list">
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star_border</i>
+                                </div>
+                                <ul class="clearfix skill-box">
+                                    <li>プチ相談</li>
+                                    <li>恋愛相談</li>
+                                    <li>人生相談</li>
+                                    <li>レッスン</li>
+                                    <li>家事</li>
+                                    <li>ペット</li>
+                                </ul>
+                            </div>
+                            <div class="supportor-box-footer">
+                                <div class="counter clearfix">
+                                    <div class="pull-left lt-at"><i class="material-icons left-ico">face</i> 
+                                        <span class="data-at"><span class="data-count">122</span></span>
+                                    </div>
+                                    <div class="pull-right rt-at"><a href="#"><i class="material-icons right-ico">favorite_border</i></a>
+                                        <span class="data-at"><span class="data-count">241</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="grid-item gallery-item-card animated fadeinup delay-1">
+                        <a href="#">
+                            <div class="card-div clearfix">
+                                <p class="card-img"><a href="#"><img src="img/avatar/avatar3.jpg" class="avatar-card circle" alt=""></a></p>
+                                <p class="card-name">ヒョノです</p>
+                                <div class="star-list">
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star_border</i>
+                                </div>
+                                <ul class="clearfix skill-box">
+                                    <li>プチ相談</li>
+                                    <li>恋愛相談</li>
+                                    <li>人生相談</li>
+                                    <li>レッスン</li>
+                                    <li>家事</li>
+                                    <li>ペット</li>
+                                </ul>
+                            </div>
+                            <div class="supportor-box-footer">
+                                <div class="counter clearfix">
+                                    <div class="pull-left lt-at"><i class="material-icons left-ico">face</i> 
+                                        <span class="data-at"><span class="data-count">122</span></span>
+                                    </div>
+                                    <div class="pull-right rt-at"><a href="#"><i class="material-icons right-ico">favorite_border</i></a>
+                                        <span class="data-at"><span class="data-count">241</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="grid-item gallery-item-card animated fadeinup delay-2">
+                        <a href="#">
+                            <div class="card-div clearfix">
+                                <p class="card-img"><a href="#"><img src="img/avatar/avatar2.jpg" class="avatar-card circle" alt=""></a></p>
+                                <p class="card-name">I am a girl</p>
+                                <div class="star-list">
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star_border</i>
+                                </div>
+                                <ul class="clearfix skill-box">
+                                    <li>プチ相談</li>
+                                    <li>恋愛相談</li>
+                                    <li>人生相談</li>
+                                    <li>レッスン</li>
+                                    <li>家事</li>
+                                    <li>ペット</li>
+                                </ul>
+                            </div>
+                            <div class="supportor-box-footer">
+                                <div class="counter clearfix">
+                                    <div class="pull-left lt-at"><i class="material-icons left-ico">face</i> 
+                                        <span class="data-at"><span class="data-count">122</span></span>
+                                    </div>
+                                    <div class="pull-right rt-at"><a href="#"><i class="material-icons right-ico">favorite</i></a>
+                                        <span class="data-at"><span class="data-count">241</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="grid-item gallery-item-card animated fadeinup delay-2">
+                        <a href="#">
+                            <div class="card-div clearfix">
+                                <p class="card-img"><a href="#"><img src="img/avatar/avatar3.jpg" class="avatar-card circle" alt=""></a></p>
+                                <p class="card-name">Miho</p>
+                                <div class="star-list">
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star_border</i>
+                                </div>
+                                <ul class="clearfix skill-box">
+                                    <li>プチ相談</li>
+                                    <li>恋愛相談</li>
+                                    <li>人生相談</li>
+                                    <li>レッスン</li>
+                                    <li>家事</li>
+                                    <li>ペット</li>
+                                </ul>
+                            </div>
+                            <div class="supportor-box-footer">
+                                <div class="counter clearfix">
+                                    <div class="pull-left lt-at"><i class="material-icons left-ico">face</i> 
+                                        <span class="data-at"><span class="data-count">122</span></span>
+                                    </div>
+                                    <div class="pull-right rt-at"><a href="#"><i class="material-icons right-ico">favorite_border</i></a>
+                                        <span class="data-at"><span class="data-count">241</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="grid-item gallery-item-card animated fadeinup delay-3">
+                        <a href="#">
+                            <div class="card-div clearfix">
+                                <p class="card-img"><a href="#"><img src="img/avatar/avatar4.jpg" class="avatar-card circle" alt=""></a></p>
+                                <p class="card-name">I am a boy, my name is yoh! just test nick name!</p>
+                                <div class="star-list">
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star_border</i>
+                                </div>
+                                <ul class="clearfix skill-box">
+                                    <li>プチ相談</li>
+                                    <li>恋愛相談</li>
+                                    <li>人生相談</li>
+                                    <li>レッスン</li>
+                                    <li>家事</li>
+                                    <li>ペット</li>
+                                </ul>
+                            </div>
+                            <div class="supportor-box-footer">
+                                <div class="counter clearfix">
+                                    <div class="pull-left lt-at"><i class="material-icons left-ico">face</i> 
+                                        <span class="data-at"><span class="data-count">122</span></span>
+                                    </div>
+                                    <div class="pull-right rt-at"><a href="#"><i class="material-icons right-ico">favorite_border</i></a>
+                                        <span class="data-at"><span class="data-count">241</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="grid-item gallery-item-card animated fadeinup delay-3">
+                        <a href="#">
+                            <div class="card-div clearfix">
+                                <p class="card-img"><a href="#"><img src="img/avatar/avatar1.jpg" class="avatar-card circle" alt=""></a></p>
+                                <p class="card-name">ヒョノです</p>
+                                <div class="star-list">
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star_border</i>
+                                </div>
+                                <ul class="clearfix skill-box">
+                                    <li>プチ相談</li>
+                                    <li>恋愛相談</li>
+                                    <li>人生相談</li>
+                                    <li>レッスン</li>
+                                    <li>家事</li>
+                                    <li>ペット</li>
+                                </ul>
+                            </div>
+                            <div class="supportor-box-footer">
+                                <div class="counter clearfix">
+                                    <div class="pull-left lt-at"><i class="material-icons left-ico">face</i> 
+                                        <span class="data-at"><span class="data-count">122</span></span>
+                                    </div>
+                                    <div class="pull-right rt-at"><a href="#"><i class="material-icons right-ico">favorite_border</i></a>
+                                        <span class="data-at"><span class="data-count">241</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+            </div>
+            
+            <!-- User List(4) -->
+            <div id="step4" class="list-user">
+            </div>
+            
+            <!-- User List(5) -->
+            <div id="step5" class="list-user">
+            </div>
+            
+            <!-- User List(6) -->
+            <div id="step6" class="list-user">
+            </div>
+            
+            <!-- User List(7) -->
+            <div id="step7" class="list-user">
+            </div>
+            
+            <!-- User List(8) -->
+            <div id="step8" class="list-user">
+            </div>
+
+            
+        </div><!-- /List Top -->
+         
+      </div> <!-- End of Page Content -->
+</div>
+
+
+<!-- Modal Structure -->
+  <div id="profile" class="modal modal-profile">
+    <div class="modal-fixed-footer">
+    
+    <!-- Toolbar -->
+        <header class="toolbar-move-sub anytimes-nav box-shad-none">
+            <a class="open-left" href="#">
+                <i class="material-icons">arrow_back</i>
+            </a>
+            <span class="title">戻る</span>
+            <div class="open-right">
+                <a href="#" class="like-btn"><i class="material-icons">favorite_border</i></a>
+                <!--<a href="#" class="like-btn active"><i class="material-icons">favorite</i></a>-->
+            </div>
+        </header>
+        
+        <!------------m^^m------------ profile Header Top------------o^^o------------>
+        <div class="p-banner animated fadeindown">
+            <div class="parallax">
+                <div class="profile-bg"><img src="img/avatar/avatar2.jpg" alt=""></div>
+                <div class="my-profile animated fadein delay-1 profile-top-contents"> 
+                    <div class="my-header">
+                        <img class="avatar circle" src="img/avatar/avatar2.jpg" alt="">
+                    </div>
+                    <div class="profile-nickname">ちかです</div>
+                </div>
+                
+                <div class="p-banner-bottom">
+                  <div class="card-profile animated fadeinup delay-1 border-r-line">
+                    <div class="c-widget">
+                      <div class="c-widget-body">
+                        <p class="m-0">3 人</p>
+                        <p class="x-small m-0">お気に入り数</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-profile animated fadeinup delay-1">
+                    <div class="c-widget">
+                      <div class="c-widget-body">
+                        <p class="m-0">5 人</p>
+                        <p class="x-small m-0">仕事完了数</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        
+          
+        
+          
+      
+        <ul class="tabs profile_tab animated fadeinup delay-2">
+            <li class="tab"><a class="active" href="#profile-info">プロフィール情報</a></li>
+            <li class="tab"><a href="#profile-commnet">レビューコメント<span>(3)</span></a></li>
+        </ul>
+        
+        <div id="profile-info">
+
+          <div class="animated fadeinup delay-2 profile-stats-box clearfix">
+              <dl>
+                  <dt>私のスタンス</dt>
+                  <dd>よく使ってるよ！</dd>
+              </dl>
+          </div>
+          
+          <div class="animated fadeinup delay-2 category-detail-box clearfix">
+            <h3 class="category-title">スキル</h3>
+            <h4 class="category-name"><i class="material-icons">pets</i>ペット</h4>
+            <ul>
+                <li class="chip"><img src="img/category/c/1.jpg" alt="">ペットケア</li>
+                <li class="chip"><img src="img/category/c/3.jpg" alt="">お散歩</li>
+                <li class="chip"><img src="img/category/c/6.jpg" alt="">えさやり</li>
+            </ul>
+          </div>
+          
+          <div class="detail-txt-area animated fadeinup delay-3">
+            <h3>基本情報</h3>
+            <ul class="detail-txt-list">
+                <li>
+                    <div class="detail-txt-body">
+                        <span class="author">評価</span>
+                        <p class="star">
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star_border</i>
+                            <i class="material-icons">star_border</i>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="detail-txt-body">
+                        <span class="author">性別</span>
+                        <p>女性</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="detail-txt-body">
+                        <span class="author">年代</span>
+                        <p>30代</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="detail-txt-body">
+                        <span class="author">住所</span>
+                        <p>東京都</p>
+                    </div>
+                </li>
+            </ul>
+          </div>
+          
+          <div class="detail-txt-area animated fadeinup delay-4">
+            <h3>自己紹介</h3>
+            <p class="detail-txt-info">
+            こんにちは！ 普段はOLをしているため、平日19時以降か土日をメインにお手伝いできます！ 
+            得意なことは、特にありませんが、何事も一生懸命取り組みたいと思います！ 
+            よろしくお願いいたします。
+            </p>
+          </div>
+          
+          <div class="detail-txt-area animated fadeinup delay-5">
+            <h3>その他の情報</h3>
+            <ul class="detail-txt-list">
+                <li>
+                    <div class="detail-txt-body">
+                        <span class="author">性格</span>
+                        <p>
+                            <span class="tag-style">親しみやすい</span>
+                            <span class="tag-style">おしゃべり好き</span>
+                            <span class="tag-style">明るい</span>
+                            <span class="tag-style">人見知り</span>
+                            <span class="tag-style">落ち着いている</span>
+                            <span class="tag-style">真面目</span>
+                            <span class="tag-style">仕事はテキパキ</span>
+                            <span class="tag-style">マイペース</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="detail-txt-body">
+                        <span class="author">職業</span>
+                        <p>会社員</p>
+                        <!--<p>主婦・主夫</p>-->
+                        <!--<p>学生</p>-->
+                        <!--<p>フリーランス</p>-->
+                        <!--<p>その他</p>-->
+                    </div>
+                </li>
+                <li>
+                    <div class="detail-txt-body">
+                        <span class="author">出身地</span>
+                        <p>東京</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="detail-txt-body">
+                    
+                        <span class="author">言語</span>
+                    <p>    
+                        <span class="tag-style">日本語</span>
+                        <span class="tag-style">英語</span>
+                        <span class="tag-style">中国語</span>
+                    </p>    
+                    </div>
+                </li>
+            </ul>
+          </div>
+          
+          <div class="animated fadeinup delay-5">
+            <ul class="social-area">
+                <li><a href="#"><img src="img/line-icon.svg" alt="Anytimes ライン メッセージ"></a></li>
+                <li><a href="#"><img src="img/fbm-icon.svg" alt="Anytimes Facebook メッセージ"></a></li>
+                <li><a href="#"><img src="img/fb-icon.svg" alt="Anytimes Facebook シェア"></a></li>
+                <li><a href="#"><img src="img/googleplus-icon.svg" alt="Anytimes Google Plus"></a></li>
+                <li><a href="#"><img src="img/tw-icon.svg" alt="Anytimes Twitter シェア"></a></li>
+                <li><a href="#"><img src="img/mail-icon.svg" alt="Anytimes メールシェア"></a></li>
+            </ul>
+          </div>
+        
+        </div>
+        
+        <div id="profile-commnet">
+            <!-- Comments -->
+          <div class="comments">
+            <h3><span>3</span>レビューコメント</h3>
+            <ul class="comments-list">
+              <li>
+                <img src="img/avatar/avatar2.jpg" alt="" class="avatar circle">
+                <div class="comment-body">
+                  <span class="author uppercase">ちか</span>
+                  <span class="date">2016.8.12</span>
+                  <p>サポートの機会を与えて頂き、ありがとうございました。 またいつでもご相談ください。 精一杯ご協力させて頂きます。</p>
+                </div>
+              </li>
+              <li>
+                <img src="img/avatar/avatar1.jpg" alt="" class="avatar circle">
+                <div class="comment-body">
+                  <span class="author uppercase">Heno</span>
+                  <span class="date">2016.8.02</span>
+                  <p>ありがとうございました。とても丁寧な仕事でした！</p>
+                </div>
+              </li>
+              <li>
+                <img src="img/avatar/avatar3.jpg" alt="" class="avatar circle">
+                <div class="comment-body">
+                  <span class="author uppercase">Yoh</span>
+                  <span class="date">2016.7.12</span>
+                  <p>ありがとうございました。</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+      
+        
+           
+        
+      </div>
+      <div class="create-task">
+            <p>
+                <a href="#" class="waves-effect waves-light z-depth-0">指名して頼む</a>
+            </p>
+        </div>  
+    </div>
+    
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="js/jquery.swipebox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>   
+<script src="js/swiper.min.js"></script>  
+<script src="js/jquery.mixitup.min.js"></script>
+<script src="js/masonry.min.js"></script>
+<script src="js/chart.min.js"></script>
+<script src="js/functions.js"></script>
+<script>
+    $(document).ready(function(){
+    $('ul.tabs').tabs('select_tab', 'tab_id');
+  });
+</script>
+<script>
+// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('header').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+    
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('header').removeClass('nav-down').addClass('nav-up');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('header').removeClass('nav-up').addClass('nav-down');
+        }
+    }
+    
+    lastScrollTop = st;
+}
+</script>
+</body>
+</html>

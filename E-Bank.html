@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+  <title>Anytimes</title>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="x-ua-compatible">
+  <meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width, minimal-ui" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+  <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" media="all" rel="stylesheet" type="text/css">
+  <link rel="icon" href="img/anytimes.ico">
+  <!-- Styles -->
+  <link href="css/keyframes.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+  <link href="css/swiper.css" rel="stylesheet" type="text/css">
+  <link href="css/swipebox.min.css" rel="stylesheet" type="text/css">
+  <link href="css/anytimes.css" rel="stylesheet" type="text/css">  
+</head>
+
+<body>
+<div class="m-scene" id="main"> <!-- Main Container -->
+
+  <!------------m^^m------------ Page Content ------------o^^o------------>
+  <div id="content" class="">
+      <!------------m^^m------------ Header Top------------o^^o------------>
+      
+      <header class="primary-color toolbar-fix">
+            <a class="open-left" href="#">
+                <i class="material-icons">arrow_back</i>
+            </a>
+            <div class="title">銀行口座情報登録</div>
+
+        </header>
+      
+      
+      <div class="animated fadeinup bank_area">
+
+            <!-- Form Inputs -->
+            <div class="form-inputs">
+                
+                <div class="input-field login-input">
+                    <input id="bank_name" type="text">
+                    <label for="bank_name">銀行名</label>
+                </div>
+                <div class="input-field login-input">
+                    <input id="bank_place_name" type="text">
+                    <label for="bank_place_name">支店名</label>
+                </div>
+                <div class="input-field login-input">
+                    <input id="acount_kinds" type="text">
+                    <label for="acount_kinds">口座種別</label>
+                </div>
+                <div class="input-field login-input">
+                    <input id="acount_number" type="text">
+                    <label for="acount_number">口座番号</label>
+                </div>
+                <div class="input-field login-input">
+                    <input id="acount_id" type="text">
+                    <label for="acount_id">口座名義</label>
+                </div>
+                
+                <!--
+                <a class="waves-effect waves-light btn-large width-100 primary-color no-smoothState" href="#" onclick="Materialize.toast('登録完了しました！', 4000,'red-toast')">登録する</a>
+                -->
+                <a class="waves-effect waves-light btn-large width-100 primary-color no-smoothState" href="#" onclick="Materialize.toast('登録完了しました！', 4000,'green-toast')">登録する</a>
+             </div>
+
+        </div>        
+      
+      
+       
+    </div> <!-- End of Page Content -->
+</div>
+  
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="js/jquery.swipebox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>   
+<script src="js/swiper.min.js"></script>  
+<script src="js/jquery.mixitup.min.js"></script>
+<script src="js/masonry.min.js"></script>
+<script src="js/chart.min.js"></script>
+<script src="js/functions.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>Anytimes</title>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="x-ua-compatible">
+    <meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width, minimal-ui" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" media="all" rel="stylesheet" type="text/css">
+    <link rel="icon" href="img/anytimes.ico">
+    <!-- Styles -->
+    <link href="css/keyframes.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <link href="css/swiper.css" rel="stylesheet" type="text/css">
+    <link href="css/swipebox.min.css" rel="stylesheet" type="text/css">
+    <link href="css/anytimes.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="anyBG">
+<div class="m-scene" id="main"> <!-- Main Container -->
+    <!-- Sidebars -->
+    <!-- Right Sidebar -->
+    <ul id="slide-out" class="side-nav">
+        <li>
+        <!-- Srearch bar -->
+            <nav class="side-active-color">
+                <div class="nav-wrapper">
+                    <form>
+                        <div class="input-field">
+                            <input id="search" type="search" class="nav-search" placeholder="キーワード" required>
+                            <label for="search"><i class="material-icons">search</i></label>
+                            <i class="material-icons">clear</i>
+                        </div>
+                    </form>
+                </div>
+            </nav>
+        </li>
+        
+        <li class="p-15">
+            <!-- Side Search -->
+            <div class="side-search">
+            
+                 <h3>検索条件（順）</h3>
+                     <ul class="radio-style clearfix">
+                         <li>
+                             <input name="group1" type="radio" id="radio1" checked />
+                             <label for="radio1">新着</label>
+                         </li>
+                         <li>
+                             <input name="group1" type="radio" id="radio2" />
+                             <label for="radio2">期限近い</label>
+                         </li>
+                         <li>
+                             <input name="group1" type="radio" id="radio3" />
+                             <label for="radio3">応募少ない</label>
+                         </li>
+                         <li>
+                             <input name="group1" type="radio" id="radio4" />
+                             <label for="radio4">金額高い</label>
+                         </li>
+                     </ul>
+                     
+                 <h3>あなたの希望金額</h3>
+                     <div class="input-field search-count">
+                         <i class="fa fa-jpy prefix"></i>
+                         <input placeholder="2,000" id="" type="text" class="validate">
+                     </div>
+                     
+                  <h3>募集終了案件の表示</h3>
+                     <div class="switch view-switch">
+                     <label>
+                     表示しない
+                     <input type="checkbox" checked>
+                     <span class="lever"></span>
+                     表示する
+                     </label>
+                     </div>
+                     
+                  <div class="side-btn">   
+                     <button class="btn waves-effect waves-light text-strong primary-color btn-large" type="submit" name="action">さがす
+                         <i class="material-icons">find_replace</i>
+                     </button>
+                  </div>    
+                     
+             </div>
+        </li>
+    </ul>
+    <!-- Left Sidebar -->
+    <ul id="slide-out-left" class="side-nav collapsible">
+        <li>
+            <div class="sidenav-header">
+                <div class="nav-logo">
+                    <h2><span>LIFE SHARE,</span><span> LIKE SHARE</span></h2>
+                </div>
+                <div class="nav-avatar">
+                    <a href="#"><img class="circle avatar" src="img/avatar/avatar3.jpg" alt=""></a>
+                    <div class="avatar-body">
+                        <h3>Miho Skualet</h3>
+                        <p class="star">
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star_border</i>
+                            <i class="material-icons">star_border</i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="active">
+            <div class="collapsible-header">
+                <a href="#"><i class="material-icons">mood</i> お手伝いする</a>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header">
+                <a href="#"><i class="material-icons">create</i> 頼んでみる</a>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header">
+                <a href="#"><i class="material-icons">face</i> サポーター</a>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header">
+                <i class="material-icons">person_pin</i> マイページ 
+            </div>
+            <div class="collapsible-body">
+                <ul class="collapsible">
+                    <li>
+                        <a href="#"><i class="material-icons">fiber_manual_record</i> 進行中</a>
+                        <a href="#"><i class="material-icons">fiber_manual_record</i> お気に入り</a>
+                        <a href="#"><i class="material-icons">fiber_manual_record</i> 終了</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header">
+                <a href="#"><i class="material-icons">chat</i> メッセージ <span class="new badge">24</span></a>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header">
+                <i class="material-icons">more_horiz</i> その他の機能 
+            </div>
+            <div class="collapsible-body">
+                <ul class="collapsible">
+                    <li>
+                        <a href="#"><i class="material-icons">fiber_manual_record</i> プロフィール編集</a>
+                        <a href="#"><i class="material-icons">fiber_manual_record</i> 身分証明書提出</a>
+                        <a href="#"><i class="material-icons">fiber_manual_record</i> 報酬支払い申請</a>
+                        <a href="#"><i class="material-icons">fiber_manual_record</i> 銀行口座情報登録</a>
+                        <a href="#"><i class="material-icons">fiber_manual_record</i> 報酬支払い申請</a>
+                        <a href="#"><i class="material-icons">fiber_manual_record</i> 報酬受取履歴</a>
+                        <a href="#"><i class="material-icons">fiber_manual_record</i> 支払い履歴</a>
+                        <a href="#"><i class="material-icons">fiber_manual_record</i> パスワード変更</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header">
+                <i class="material-icons">help</i> サービスについて 
+            </div>
+            <div class="collapsible-body">
+                <ul class="collapsible">
+                    <li>
+                        <a href="#"><i class="material-icons">fiber_manual_record</i> 問い合わせ・ご意見</a>
+                        <a href="#"><i class="material-icons">fiber_manual_record</i> 利用規約</a>
+                        <a href="#"><i class="material-icons">fiber_manual_record</i> 個人情報保護方針</a>
+                        <a href="#"><i class="material-icons">fiber_manual_record</i> 特別商取引表記</a>
+                        <a href="#"><i class="material-icons">fiber_manual_record</i> 報酬支払い申請</a>
+                        <a href="#"><i class="material-icons">fiber_manual_record</i> 退会</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header">
+                 
+            </div>
+        </li>
+        
+
+    </ul>
+    <!-- End of Sidebars -->
+
+    <!------------m^^m------------ Page Content ------------o^^o------------>
+    <div id="content" class="top-bg">
+
+        <!------------m^^m------------ Header Top------------o^^o------------>
+        <header id="" class="primary-color z-depth-1 toolbar-move hiddendiv">
+            <div class="open-left" id="open-left" data-activates="slide-out-left">
+                <i class="material-icons">menu</i>
+            </div>
+            <div class="title center">ANYTIMES</div>
+            <div class="open-right" id="open-right" data-activates="slide-out">
+                <i class="material-icons">search</i>
+            </div>
+        </header>
+        
+        <div class="navbar-fixed navbar-second-hiddentop">
+            <ul class="tabs">
+                <li class="tab"><a class="active" href="#step1">すべて</a></li>
+                <li class="tab"><a href="#step2">Build&Repair</a></li>
+                <li class="tab"><a href="#step3">家事</a></li>
+                <li class="tab"><a href="#step4">組立・修理</a></li>
+                <li class="tab"><a href="#step5">ペット</a></li>
+                <li class="tab"><a href="#step6">子供・高齢者</a></li>
+                <li class="tab"><a href="#step7">レッスン</a></li>
+                <li class="tab"><a href="#step8">その他</a></li>
+             </ul>
+        </div>
+
+        <!-- List Top -->
+        <div class="list-move-none">
+        
+            <!-- Category List(1) -->
+            <div id="step1" class="col s12 list-top">
+                
+                <div class="view-list animated fadein delay-1"> 
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar4.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">yoh</span>
+                            <span class="small view-title">お庭のお手入れをお願いしますお庭のお手入れをお願いしますお庭のお手入れをお願いしますお庭のお手入れをお願いしますお庭のお手入れをお願いします</span>
+                            <span class="money"><em>¥</em>5,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>2016/12/23</span></span>
+                    </div>
+                </div>
+                
+                <div class="view-list animated fadein delay-2">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar1.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">ひょの</span>
+                            <span class="small view-title">イタリア料理を教えてください！美味しくて、見た目も綺麗なものであれば十分です。イタリア料理を教えてください！美味しくて、見た目も綺麗なものであれば十分です。</span>
+                            <span class="money"><em>¥</em>7,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>東京都千代田区アラビアンナイトメゾオンサイドバック25−５−７</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>2016/12/23</span></span>
+                    </div>
+                </div>
+                
+                <div class="view-list animated fadein delay-3">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar2.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">ちか</span>
+                            <span class="small view-title">不用品・荷物整理の手伝い</span>
+                            <span class="money"><em>¥</em>3,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+                <div class="view-list animated fadein delay-4">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/any.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">any</span>
+                            <span class="small view-title">フローリング施工</span>
+                            <span class="money"><em>¥</em>8,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+                <div class="view-list animated fadein delay-5">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar3.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">miho</span>
+                            <span class="small view-title">Windows 10の操作</span>
+                            <span class="money"><em>¥</em>5,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+                <div class="view-list animated fadein delay-6">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar4.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">yoh</span>
+                            <span class="small view-title">お庭のお手入れをお願いします</span>
+                            <span class="money"><em>¥</em>5,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+                <div class="view-list animated fadein delay-6">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar1.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">ひょの</span>
+                            <span class="small view-title">イタリア料理を教えてください</span>
+                            <span class="money"><em>¥</em>7,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+                <div class="view-list animated fadein delay-6">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar2.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">ちか</span>
+                            <span class="small view-title">不用品・荷物整理の手伝い</span>
+                            <span class="money"><em>¥</em>1,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+                <div class="view-list animated fadein delay-6">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/any.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">any</span>
+                            <span class="small view-title">フローリング施工</span>
+                            <span class="money"><em>¥</em>3,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+                <div class="view-list animated fadein delay-6">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar3.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">miho</span>
+                            <span class="small view-title">Windows 10の操作</span>
+                            <span class="money"><em>¥</em>4,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- Category List(2) -->
+            <div id="step2" class="col s12 list-top">
+            
+                <div class="view-list animated fadein delay-1">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar4.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">yoh</span>
+                            <span class="small view-title">お庭のお手入れをお願いします</span>
+                            <span class="money"><em>¥</em>5,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+                <div class="view-list animated fadein delay-2">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar1.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">ひょの</span>
+                            <span class="small view-title">イタリア料理を教えてください</span>
+                            <span class="money"><em>¥</em>7,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+                <div class="view-list animated fadein delay-3">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar2.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">ちか</span>
+                            <span class="small view-title">不用品・荷物整理の手伝い</span>
+                            <span class="money"><em>¥</em>6,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+                <div class="view-list animated fadein delay-4">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/any.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">any</span>
+                            <span class="small view-title">フローリング施工</span>
+                            <span class="money"><em>¥</em>2,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+                <div class="view-list animated fadein delay-5">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar3.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">miho</span>
+                            <span class="small view-title">Windows 10の操作</span>
+                            <span class="money"><em>¥</em>5,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+                <div class="view-list animated fadein delay-6">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar4.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">yoh</span>
+                            <span class="small view-title">お庭のお手入れをお願いします</span>
+                            <span class="money"><em>¥</em>5,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+                <div class="view-list animated fadein delay-6">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar1.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">ひょの</span>
+                            <span class="small view-title">イタリア料理を教えてください</span>
+                            <span class="money"><em>¥</em>7,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+                <div class="view-list animated fadein delay-6">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar2.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">ちか</span>
+                            <span class="small view-title">不用品・荷物整理の手伝い</span>
+                            <span class="money"><em>¥</em>5,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- Category List(3) -->
+            <div id="step3" class="col s12 list-top">
+            
+                <div class="view-list animated fadein delay-1">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar4.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">yoh</span>
+                            <span class="small view-title">お庭のお手入れをお願いします</span>
+                            <span class="money"><em>¥</em>5,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+                <div class="view-list animated fadein delay-2">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar1.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">ひょの</span>
+                            <span class="small view-title">イタリア料理を教えてください</span>
+                            <span class="money"><em>¥</em>7,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+                <div class="view-list animated fadein delay-3">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar2.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">ちか</span>
+                            <span class="small view-title">不用品・荷物整理の手伝い</span>
+                            <span class="money"><em>¥</em>5,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+                <div class="view-list animated fadein delay-4">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/any.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">any</span>
+                            <span class="small view-title">フローリング施工</span>
+                            <span class="money"><em>¥</em>5,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+                <div class="view-list animated fadein delay-5">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar3.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">miho</span>
+                            <span class="small view-title">Windows 10の操作</span>
+                            <span class="money"><em>¥</em>5,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+                <div class="view-list animated fadein delay-6">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar4.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">yoh</span>
+                            <span class="small view-title">お庭のお手入れをお願いします</span>
+                            <span class="money"><em>¥</em>5,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+                <div class="view-list animated fadein delay-6">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar1.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">ひょの</span>
+                            <span class="small view-title">イタリア料理を教えてください</span>
+                            <span class="money"><em>¥</em>7,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+                <div class="view-list animated fadein delay-6">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar2.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">ちか</span>
+                            <span class="small view-title">不用品・荷物整理の手伝い</span>
+                            <span class="money"><em>¥</em>5,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- Category List(4) -->
+            <div id="step4" class="col s12 list-top">
+            
+                <div class="view-list animated fadein delay-1">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar4.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">yoh</span>
+                            <span class="small view-title">お庭のお手入れをお願いします</span>
+                            <span class="money"><em>¥</em>5,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+                <div class="view-list animated fadein delay-2">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar1.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">ひょの</span>
+                            <span class="small view-title">イタリア料理を教えてください</span>
+                            <span class="money"><em>¥</em>7,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+                <div class="view-list animated fadein delay-3">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar2.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">ちか</span>
+                            <span class="small view-title">不用品・荷物整理の手伝い</span>
+                            <span class="money"><em>¥</em>5,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- Category List(5) -->
+            <div id="step5" class="col s12 list-top">
+            
+                <div class="view-list animated fadein delay-1">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar4.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">yoh</span>
+                            <span class="small view-title">お庭のお手入れをお願いします</span>
+                            <span class="money"><em>¥</em>5,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+                <div class="view-list animated fadein delay-2">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar1.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">ひょの</span>
+                            <span class="small view-title">イタリア料理を教えてください</span>
+                            <span class="money"><em>¥</em>7,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+                <div class="view-list animated fadein delay-3">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar2.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">ちか</span>
+                            <span class="small view-title">不用品・荷物整理の手伝い</span>
+                            <span class="money"><em>¥</em>5,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- Category List(6) -->
+            <div id="step6" class="col s12 list-top">
+            
+                <div class="view-list animated fadein delay-1">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar4.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">yoh</span>
+                            <span class="small view-title">お庭のお手入れをお願いします</span>
+                            <span class="money"><em>¥</em>5,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+                <div class="view-list animated fadein delay-2">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar1.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">ひょの</span>
+                            <span class="small view-title">イタリア料理を教えてください</span>
+                            <span class="money"><em>¥</em>7,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+                <div class="view-list animated fadein delay-3">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar2.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">ちか</span>
+                            <span class="small view-title">不用品・荷物整理の手伝い</span>
+                            <span class="money"><em>¥</em>5,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- Category List(7) -->
+            <div id="step7" class="col s12 list-top">
+            
+                <div class="view-list animated fadein delay-1">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar4.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">yoh</span>
+                            <span class="small view-title">お庭のお手入れをお願いします</span>
+                            <span class="money"><em>¥</em>5,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+                <div class="view-list animated fadein delay-2">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar1.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">ひょの</span>
+                            <span class="small view-title">イタリア料理を教えてください</span>
+                            <span class="money"><em>¥</em>7,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+                <div class="view-list animated fadein delay-3">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar2.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">ちか</span>
+                            <span class="small view-title">不用品・荷物整理の手伝い</span>
+                            <span class="money"><em>¥</em>5,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- Category List(8) -->
+            <div id="step8" class="col s12 list-top">
+            
+                <div class="view-list animated fadein delay-1">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar4.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">yoh</span>
+                            <span class="small view-title">お庭のお手入れをお願いします</span>
+                            <span class="money"><em>¥</em>5,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+                <div class="view-list animated fadein delay-2">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar1.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">ひょの</span>
+                            <span class="small view-title">イタリア料理を教えてください</span>
+                            <span class="money"><em>¥</em>7,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+                <div class="view-list animated fadein delay-3">
+                    <div class="view-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar2.jpg" alt=""></a>
+                        <div class="view-author">
+                            <span class="view-name">ちか</span>
+                            <span class="small view-title">不用品・荷物整理の手伝い</span>
+                            <span class="money"><em>¥</em>5,000</span>
+                        </div>
+                    </div>
+                    <div class="view-info">
+                        <span class="view-place"><i class="material-icons">location_on</i><span>新宿区</span></span>
+                        <span class="view-time"><i class="material-icons">access_time</i><span>いつでもいい</span></span>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div><!-- /List Top -->
+
+        <!-- Floating Action Button -->
+        <div class="floating-button page-fab animated bouncein delay-3">
+            <a class="btn-floating btn-large waves-effect waves-light accent-color btn z-depth-1" href="#">
+                <i class="material-icons">add</i>
+            </a>
+        </div>
+        
+    </div><!-- /Content -->
+</div> <!-- /Main Container -->
+    
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="js/jquery.swipebox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>   
+<script src="js/swiper.min.js"></script>  
+<script src="js/jquery.mixitup.min.js"></script>
+<script src="js/masonry.min.js"></script>
+<script src="js/chart.min.js"></script>
+<script src="js/functions.js"></script>
+<script>
+    $(document).ready(function(){
+    $('ul.tabs').tabs('select_tab', 'tab_id');
+  });
+</script>
+
+
+</body>
+
+</html>

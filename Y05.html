@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>Anytimes</title>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="x-ua-compatible">
+    <meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width, minimal-ui" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" media="all" rel="stylesheet" type="text/css">
+    <link rel="icon" href="img/anytimes.ico">
+    <!-- Styles -->
+    <link href="css/keyframes.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <link href="css/swiper.css" rel="stylesheet" type="text/css">
+    <link href="css/swipebox.min.css" rel="stylesheet" type="text/css">
+    <link href="css/anytimes.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="category-bg">
+<div class="m-scene" id="main"> <!-- Main Container -->
+
+    <!------------m^^m------------ Page Content ------------o^^o------------>
+    <div id="content" class="page category-bg">
+        
+        <!------------m^^m------------ Header Top------------o^^o------------>
+        <header class="primary-color toolbar-fix">
+            <a class="open-left" href="#">
+                <i class="material-icons">arrow_back</i>
+            </a>
+            <div class="title">決済手続き</div>
+        </header>
+        
+        <!-- Payment Content -->
+        <div class="animated fadeinup payment">
+          
+            <!-- Products in cart -->
+                <div class="checkout-details">
+                  <img class="checkout-image circle" src="img/avatar/avatar4.jpg" alt="">
+                  <div class="checkout-product-title">
+                    <h6>よーです<span class="right">¥5,000</span></h6>
+                    <p class="star">
+                      <i class="material-icons">star</i>
+                      <i class="material-icons">star</i>
+                      <i class="material-icons">star</i>
+                      <i class="material-icons">star_border</i>
+                      <i class="material-icons">star_border</i>
+                  　</p>
+                  </div>
+                </div>
+                
+                <!-- Discount -->
+                <div class="discount">
+                  <h6>クーポンを使用</h6>
+                  <div class="input-field">
+                    <input id="code" type="text" class="validate">
+                    <label for="code">ILOVEANYTIMES</label>
+                    <div class="btn primary-color">
+                      <i class="material-icons">arrow_forward</i>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Subtotal -->
+                <div class="subtotal">
+                  <h6>クーポン金額<span class="right">¥3,000</span></h6>
+                </div>
+
+                <!-- Total -->
+                <div class="total">
+                  <h4>合計金額 <span class="right">¥2,000</span></h4>
+                </div>
+                
+                <p class="info-txt">前払い決済が終わり次第本契約となり仕事実施です。 仕事完了後、サポーターに報酬が支払われます。</p>
+
+        </div>
+        
+        <a class="waves-effect waves-light btn-large width-100 accent-color font-bold fixed-btn" href="#">決済手続きへ</a>
+        
+    </div> <!-- End of Page Container -->
+</div> <!-- End of Main Contents -->    
+<!-- Modal -->
+<div id="modal-choice-supportor" class="modal bottom-sheet modal-choice-supportor">
+    <div class="modal-content">
+        <h4>サポーターを選んでください</h4>
+        <a href="#" class="waves-effect waves-light btn-flat width-100 anytime-btn-pink-border z-index-0"><span>お気に入り一覧から選ぶ</span></a>
+        <a href="#" class="waves-effect waves-light btn-flat width-100 anytime-btn-blue-border z-index-0"><span>サポーター一覧から選ぶ</span></a>
+    </div>
+</div>
+                       
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery.swipebox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <script src="js/swiper.min.js"></script>  
+    <script src="js/jquery.mixitup.min.js"></script>
+    <script src="js/masonry.min.js"></script>
+    <script src="js/chart.min.js"></script>
+    <script src="js/functions.js"></script>
+  </body>
+</html>

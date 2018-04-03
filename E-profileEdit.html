@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>Anytimes</title>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="x-ua-compatible">
+    <meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width, minimal-ui" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" media="all" rel="stylesheet" type="text/css">
+    <link rel="icon" href="img/anytimes.ico">
+    <!-- Styles -->
+    <link href="css/keyframes.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <link href="css/swiper.css" rel="stylesheet" type="text/css">
+    <link href="css/swipebox.min.css" rel="stylesheet" type="text/css">
+    <link href="css/anytimes.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+
+    <div class="m-scene" id="main"> <!-- Main Container -->
+
+    <!------------m^^m------------ Page Content ------------o^^o------------>
+    <div id="content" class="page task-bg">
+        
+        <!------------m^^m------------ Header Top------------o^^o------------>
+        <header class="primary-color toolbar-fix">
+            <a class="open-left" href="#">
+                <i class="material-icons">arrow_back</i>
+            </a>
+            <div class="title">プロフィール編集</div>
+            <div class="open-right header-icon">
+                <a href="#"><i class="material-icons">person</i></a>
+            </div>
+        </header>
+        
+        <!-- Task Content -->
+        <div class="animated fadeinup">
+            
+            <!-- ~~m^^m~~ ---------------- Profile Eidt Area ---------------- ~~m^^m~~ -->
+        
+            <div class="form-inputs">
+                
+                <div class="profile-edit">
+                  <div>
+                      <img class="profile-image" src="img/avatar/avatar2.jpg" alt="">
+                                    
+                      <div class="file-field input-field edit-photo">
+                          <div class="btn anytime-btn-blue-border">
+                              <span>編集</span>
+                              <input type="file" multiple>
+                          </div>
+                      </div>
+                  </div>    
+                  <div class="profile-product-title">
+                      <div class="input-field task-input">
+                          <input id="profile_nickname" type="text" placeholder="chika">
+                          <label for="profile_nickname">ニックネーム</label>
+                      </div>
+                      <div class="input-field task-input">
+                          <input id="profile_mail" type="email" placeholder="chika@any-time.com">
+                          <label for="profile_mail">メールアドレス（非公開）</label>
+                      </div>
+                  </div>
+                </div>
+                
+                <h4 class="task-label shipping-address">自己紹介</h4>
+                <textarea class="materialize-textarea" placeholder="自己紹介を入力してください..."></textarea>
+                
+                <h4>得意なスキル</h4>
+                <div class="animated fadeinup delay-2 btn-detail-box shadow-none task-btn-box clearfix">
+                    <a class="waves-effect waves-light btn-flat width-100 anytime-btn-blue-border z-index-0 modal-trigger" href="#skill">得意なスキルを選んでください</a>
+                    <p>複数のスキル選択が可能です</p>
+                </div>
+                
+                <!-- choiced category (disappear) -->
+                <div class="animated fadeinright delay-3 category-task-box clearfix">
+                    <h3 class="category-txt"><i class="material-icons">pets</i>ペット</h3>
+                    <ul>
+                        <li class="chip"><img src="img/category/c/1.jpg" alt="">ペットケア</li>
+                        <li class="chip"><img src="img/category/c/3.jpg" alt="">お散歩</li>
+                    </ul>
+                </div><!-- / choiced category -->
+                
+                <h4 class="shipping-address">サポーター一覧に公開</h4>
+                <div class="radio-field clearfix">
+                    <ul>
+                        <li>
+                            <input type="radio" id="profile-01" name="open-group" checked />
+                            <label for="profile-01">公開する</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="profile-02" name="open-group" />
+                            <label for="profile-02">公開しない</label>
+                        </li>    
+                    </ul>
+                </div>
+                
+                <h4 class="shipping-address">名前 <span>（本名は非公開です）</span></h4>
+                <div class="input-field login-input">
+                    <span class="prefix profile-name-pre">性</span>
+                    <input id="family-name" type="text"> 
+                    <label for="family-name">tsunoda</label>
+                </div>
+                <div class="input-field login-input">
+                    <span class="prefix profile-name-pre">名</span>
+                    <input id="given-name" type="text"> 
+                    <label for="given-name">chika</label>
+                </div>
+                
+                <h4 class="shipping-address">性別</h4>
+                <div class="radio-field clearfix">
+                    <ul>
+                        <li>
+                            <input type="radio" id="profile-03" name="profile-group" />
+                            <label for="profile-03">女性</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="profile-04" name="profile-group" />
+                            <label for="profile-04">男性</label>
+                        </li>    
+                    </ul>
+                </div>
+                
+                <h4 class="shipping-address">生年月日<span>（年代のみ公開されます）</span></h4>
+                <ul class="collapsible calendar-box animated fadeindown delay-2" data-collapsible="accordion">
+                    <li class="calendar-box">
+                        <div class="collapsible-header">選択してください<i class="material-icons">date_range</i></div>
+                        <div class="collapsible-body calendar-top">
+                        <!-- Calendar -->
+                        <div class="calendar animated fadeindown">
+                        <ul class="calendar-top">
+                            <li class="pull-left"><a href="#" class="alink"><i class="material-icons">keyboard_arrow_left</i></a></li>
+                            <li class="year-day">2016年<span>8月</span></li>
+                            <li class="pull-right"><a href="#" class="alink"><i class="material-icons">keyboard_arrow_right</i></a></li>
+                        </ul>
+                        <table>
+                        <!-- Weekdays -->
+                        <thead>
+                        <tr>
+                            <td>日</td>
+                            <td>月</td>
+                            <td>火</td>
+                            <td>水</td>
+                            <td>木</td>
+                            <td>金</td>
+                            <td>土</td>
+                        </tr>
+                        </thead>
+                        <!-- Month Days -->
+                        <tbody>
+                        <tr>
+                            <td class="prev-month">29</td>
+                            <td class="prev-month">30</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>14</td>
+                            <td class="active">15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td>31</td>
+                            <td class="next-month">1</td>
+                            <td class="next-month">2</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                    </div> <!-- end calendar -->
+                    </div>
+                </li>
+            </ul>
+
+                <h4 class="shipping-address">住所<span>（都道府県のみ公開されます）</span></h4>
+                <select class="browser-default task-select-box">
+                    <option value="" disabled selected>都道府県を選んでください</option>
+                    <option value="1">青森</option>
+                    <option value="2">秋田</option>
+                    <option value="3">千葉</option>
+                    <option value="4">大阪</option>
+                    <option value="5">福岡</option>
+                </select>
+                <div class="input-field task-input task-select">
+                    <span class="prefix profile-ico-pre"><i class="material-icons">place</i></span>
+                    <input id="my_place" type="text"> 
+                    <label for="my_place">場所</label>
+                </div>
+                <div class="input-field task-input task-select">
+                    <span class="prefix profile-ico-pre"><i class="material-icons">location_city</i></span>
+                    <input id="my_home" type="text"> 
+                    <label for="my_home">建物</label>
+                </div>
+                
+                <h4 class="shipping-address">電話番号<span>（電話番号は非公開です）</span></h4> 
+                <div class="input-field login-input">
+                    <span class="prefix profile-name-pre">Tel</span>
+                    <input id="my-phone" type="number"> 
+                    <label for="my-phone"></label>
+                </div>
+                
+                <div class="radio-field clearfix m-b-40">
+                    <ul>
+                        <li>
+                            <input type="radio" id="personal-y" name="type-group" checked />
+                            <label for="personal-y">個人</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="personal-n" name="type-group" />
+                            <label for="personal-n">法人</label>
+                        </li>    
+                    </ul>
+                </div>
+            
+            </div>
+            
+
+        </div> <!-- End of Profile Edit Contents -->
+    </div> <!-- End of Page Content -->
+    
+    <div class="profile-edit-btn">
+        <p>
+            <button type="submit" class="waves-effect waves-light z-depth-0">保存する</button>
+        </p>
+    </div>
+            
+</div> <!-- End of Page Container -->
+ <!-- Modal Trigger -->
+ 
+  <!-- Modal Structure -->
+  <div id="skill" class="modal modal-anytimes">
+    <div class="">
+      <header class="primary-color toolbar-fix">
+            <a class="open-left modal-close" href="#!">
+                <i class="material-icons">arrow_back</i>
+            </a>
+            <div class="title">スキル選択</div>
+      </header>
+      <div class="animated fadeinup category-list modal-top">
+          
+            <h3 class="p-20">複数のスキル選択が可能です</h3>
+            
+          <ul class="faq collapsible animated fadeinright delay-2 popout" data-collapsible="accordion">
+            <li>
+              <div class="collapsible-header"><i class="material-icons category-ico">hearing</i>プチ相談<i class="material-icons right">keyboard_arrow_down</i></div>
+              <div class="collapsible-body">
+                  <ul class="category-choice-list">
+                      <li>
+                       
+                              <div class="category-list-ui">
+                                  <img src="img/category/g/70-le.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">人生</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                          
+                      </li>
+                      <li class="active"><!-- active list-->
+                         
+                              <div class="category-list-ui">
+                                  <img src="img/category/g/71-cr.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">仕事・キャリア</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                          
+                      </li>
+                      <li>
+                         
+                              <div class="category-list-ui">
+                                  <img src="img/category/g/72-fy.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">家庭</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                         
+                      </li>
+                      <li>
+                          
+                              <div class="category-list-ui">
+                                  <img src="img/category/g/73-rs.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">子育て</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                         
+                      </li>
+                      <li>
+                         
+                              <div class="category-list-ui">
+                                  <img src="img/category/g/74-sy.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">勉学</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                         
+                      </li>
+                      <li>
+                          
+                              <div class="category-list-ui">
+                                  <img src="img/category/g/75-fe.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">お金</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                        
+                      </li>
+                      <li>
+                     
+                              <div class="category-list-ui">
+                                  <img src="img/category/g/76-hh.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">健康</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                      
+                      </li>
+                      <li>
+                     
+                              <div class="category-list-ui">
+                                  <img src="img/category/g/77-le.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">恋愛</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                       
+                      </li>
+                      <li>
+                      
+                              <div class="category-list-ui">
+                                  <img src="img/category/g/78-me.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">結婚</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                     
+                      </li>
+                      <li>
+                       
+                              <div class="category-list-ui">
+                                  <img src="img/category/g/79-hy.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">趣味</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+              
+                      </li>
+                      <li>
+                      
+                              <div class="category-list-ui">
+                                  <img src="img/category/g/any.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">その他</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                   
+                      </li>
+                  </ul>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons category-ico active">restaurant</i>家事<i class="material-icons right">keyboard_arrow_down</i></div>
+              <div class="collapsible-body">
+                  <ul class="category-choice-list">
+                      <li>
+                       
+                              <div class="category-list-ui">
+                                  <img src="img/category/a/1.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">掃除</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                          
+                      </li>
+                      <li class="active"><!-- active list-->
+                         
+                              <div class="category-list-ui">
+                                  <img src="img/category/a/2.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">料理</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                          
+                      </li>
+                      <li>
+                         
+                              <div class="category-list-ui">
+                                  <img src="img/category/a/3.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">買い物代行</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                         
+                      </li>
+                      <li>
+                          
+                              <div class="category-list-ui">
+                                  <img src="img/category/a/5.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">洗濯</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                         
+                      </li>
+                      <li>
+                         
+                              <div class="category-list-ui">
+                                  <img src="img/category/a/6.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">害虫駆除</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                         
+                      </li>
+                      <li>
+                          
+                              <div class="category-list-ui">
+                                  <img src="img/category/a/7.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">エアコン掃除</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                        
+                      </li>
+                      <li>
+                     
+                              <div class="category-list-ui">
+                                  <img src="img/category/a/17-gg.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">民泊清掃</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                      
+                      </li>
+                      <li>
+                     
+                              <div class="category-list-ui">
+                                  <img src="img/category/a/4.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">庭の手入れ</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                       
+                      </li>
+                      <li>
+                      
+                              <div class="category-list-ui">
+                                  <img src="img/category/any.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">その他</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                     
+                      </li>
+                  </ul>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons category-ico">restaurant</i>組立・修理<i class="material-icons right">keyboard_arrow_down</i></div>
+              <div class="collapsible-body">
+                  <ul class="category-choice-list">
+                      <li>
+                       
+                              <div class="category-list-ui">
+                                  <img src="img/category/b/1.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">家具組立</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                          
+                      </li>
+                      <li class="active"><!-- active list-->
+                         
+                              <div class="category-list-ui">
+                                  <img src="img/category/b/2.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">水回り</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                          
+                      </li>
+                      <li>
+                         
+                              <div class="category-list-ui">
+                                  <img src="img/category/b/3.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">キッチン</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                         
+                      </li>
+                      <li>
+                          
+                              <div class="category-list-ui">
+                                  <img src="img/category/b/4.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">家電</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                         
+                      </li>
+                      <li>
+                         
+                              <div class="category-list-ui">
+                                  <img src="img/category/b/5.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">壁・床</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                         
+                      </li>
+                      <li>
+                          
+                              <div class="category-list-ui">
+                                  <img src="img/category/b/6.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">機器の設定</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                        
+                      </li>
+                      <li>
+                     
+                              <div class="category-list-ui">
+                                  <img src="img/category/b/7.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">電球交換</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                      
+                      </li>
+                      <li>
+                      
+                              <div class="category-list-ui">
+                                  <img src="img/category/any.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">その他</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                     
+                      </li>
+                  </ul>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons category-ico active">pets</i>ペット<i class="material-icons right">keyboard_arrow_down</i></div>
+              <div class="collapsible-body">
+                  <ul class="category-choice-list">
+                      <li>
+                       
+                              <div class="category-list-ui">
+                                  <img src="img/category/c/1.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">ペットケア</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                          
+                      </li>
+                      <li class="active"><!-- active list-->
+                         
+                              <div class="category-list-ui">
+                                  <img src="img/category/c/2.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">入浴手伝い</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                          
+                      </li>
+                      <li>
+                         
+                              <div class="category-list-ui">
+                                  <img src="img/category/c/3.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">お散歩</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                         
+                      </li>
+                      <li>
+                          
+                              <div class="category-list-ui">
+                                  <img src="img/category/c/4.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">ヘアカット</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                         
+                      </li>
+                      <li>
+                         
+                              <div class="category-list-ui">
+                                  <img src="img/category/c/5.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">シート交換</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                         
+                      </li>
+                      <li>
+                          
+                              <div class="category-list-ui">
+                                  <img src="img/category/c/6.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">えさやり</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                        
+                      </li>
+                      <li>
+                     
+                              <div class="category-list-ui">
+                                  <img src="img/category/c/7.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">しつけ</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                      
+                      </li>
+                      <li>
+                      
+                              <div class="category-list-ui">
+                                  <img src="img/category/any.jpg" alt="" class="category-img">
+                                  <div class="category-choice-body">
+                                      <span class="category-title-name">その他</span>
+                                      <span class="check-box"><i class="material-icons">check_box</i></span>
+                                  </div>
+                              </div>
+                     
+                      </li>
+                  </ul>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons category-ico">accessible</i>子供・高齢者<i class="material-icons right">keyboard_arrow_down</i></div>
+              <div class="collapsible-body"></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons category-ico">school</i>レッスン<i class="material-icons right">keyboard_arrow_down</i></div>
+              <div class="collapsible-body"></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons category-ico">more_vert</i>その他<i class="material-icons right">keyboard_arrow_down</i></div>
+              <div class="collapsible-body"></div>
+            </li>
+          </ul>  
+        
+        </div>
+        
+    </div>
+  </div>
+      
+                       
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery.swipebox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <script src="js/swiper.min.js"></script>  
+    <script src="js/jquery.mixitup.min.js"></script>
+    <script src="js/masonry.min.js"></script>
+    <script src="js/chart.min.js"></script>
+    <script src="js/functions.js"></script>
+  </body>
+</html>

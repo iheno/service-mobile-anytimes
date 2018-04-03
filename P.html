@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>Anytimes</title>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="x-ua-compatible">
+    <meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width, minimal-ui" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" media="all" rel="stylesheet" type="text/css">
+    <link rel="icon" href="img/anytimes.ico">
+    <!-- Styles -->
+    <link href="css/keyframes.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <link href="css/swiper.css" rel="stylesheet" type="text/css">
+    <link href="css/swipebox.min.css" rel="stylesheet" type="text/css">
+    <link href="css/anytimes.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div class="m-scene" id="main"> <!-- Main Container -->
+
+    <!------------m^^m------------ Page Content ------------o^^o------------>
+    <div id="content">
+
+        <!-- Toolbar -->
+        <header class="toolbar-move-sub anytimes-nav box-shad-none">
+            <a class="open-left" href="#">
+                <i class="material-icons">arrow_back</i>
+            </a>
+            <span class="title">戻る</span>
+            <div class="open-right">
+                <a href="#" class="like-btn"><i class="material-icons">favorite_border</i></a>
+                <!--<a href="#" class="like-btn active"><i class="material-icons">favorite</i></a>-->
+            </div>
+        </header>
+        
+        <!------------m^^m------------ profile Header Top------------o^^o------------>
+        <div class="h-banner p-banner animated fadeindown">
+            <div class="parallax">
+                <div class="profile-bg"><img src="img/avatar/avatar2.jpg" alt=""></div>
+                <div class="my-profile animated fadein delay-1 profile-top-contents"> 
+                    <div class="my-header">
+                        <img class="avatar circle" src="img/avatar/avatar2.jpg" alt="">
+                    </div>
+                    <div class="identification"><span><i class="material-icons">check_circle</i></span>本人確認OK</div>
+                    <div class="profile-nickname">ちかです</div>
+                </div>
+                
+                <div class="p-banner-bottom">
+                  <div class="card-profile animated fadeinup delay-1 border-r-line">
+                    <div class="c-widget">
+                      <div class="c-widget-body">
+                        <p class="m-0">3 人</p>
+                        <p class="x-small m-0">お気に入り数</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-profile animated fadeinup delay-1">
+                    <div class="c-widget">
+                      <div class="c-widget-body">
+                        <p class="m-0">5 人</p>
+                        <p class="x-small m-0">仕事完了数</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        
+          
+        
+          
+      
+        <ul class="tabs profile_tab animated fadeinup delay-2">
+            <li class="tab"><a class="active" href="#profile-info">プロフィール情報</a></li>
+            <li class="tab"><a href="#profile-commnet">レビューコメント<span>(3)</span></a></li>
+        </ul>
+        
+        <div id="profile-info">
+
+          <div class="animated fadeinup delay-2 profile-stats-box clearfix">
+              <dl>
+                  <dt>私のスタンス</dt>
+                  <dd>よく使ってるよ！</dd>
+              </dl>
+          </div>
+          
+          <div class="animated fadeinup delay-2 category-detail-box clearfix">
+            <h3 class="category-title">スキル</h3>
+            <h4 class="category-name"><i class="material-icons">pets</i>ペット</h4>
+            <ul>
+                <li class="chip"><img src="img/category/c/1.jpg" alt="">ペットケア</li>
+                <li class="chip"><img src="img/category/c/3.jpg" alt="">お散歩</li>
+                <li class="chip"><img src="img/category/c/6.jpg" alt="">えさやり</li>
+            </ul>
+          </div>
+          
+          <div class="detail-txt-area animated fadeinup delay-3">
+            <h3>基本情報</h3>
+            <ul class="detail-txt-list">
+                <li>
+                    <div class="detail-txt-body">
+                        <span class="author">評価</span>
+                        <p class="star">
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star_border</i>
+                            <i class="material-icons">star_border</i>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="detail-txt-body">
+                        <span class="author">性別</span>
+                        <p>女性</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="detail-txt-body">
+                        <span class="author">年代</span>
+                        <p>30代</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="detail-txt-body">
+                        <span class="author">住所</span>
+                        <p>東京都</p>
+                    </div>
+                </li>
+            </ul>
+          </div>
+          
+          <div class="detail-txt-area animated fadeinup delay-4">
+            <h3>自己紹介</h3>
+            <p class="detail-txt-info">
+            こんにちは！ 普段はOLをしているため、平日19時以降か土日をメインにお手伝いできます！ 
+            得意なことは、特にありませんが、何事も一生懸命取り組みたいと思います！ 
+            よろしくお願いいたします。
+            </p>
+          </div>
+          
+          <div class="detail-txt-area animated fadeinup delay-5">
+            <h3>その他の情報</h3>
+            <ul class="detail-txt-list">
+                <li>
+                    <div class="detail-txt-body">
+                        <span class="author">性格</span>
+                        <p>
+                            <span class="tag-style">親しみやすい</span>
+                            <span class="tag-style">おしゃべり好き</span>
+                            <span class="tag-style">明るい</span>
+                            <span class="tag-style">人見知り</span>
+                            <span class="tag-style">落ち着いている</span>
+                            <span class="tag-style">真面目</span>
+                            <span class="tag-style">仕事はテキパキ</span>
+                            <span class="tag-style">マイペース</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="detail-txt-body">
+                        <span class="author">職業</span>
+                        <p>会社員</p>
+                        <!--<p>主婦・主夫</p>-->
+                        <!--<p>学生</p>-->
+                        <!--<p>フリーランス</p>-->
+                        <!--<p>その他</p>-->
+                    </div>
+                </li>
+                <li>
+                    <div class="detail-txt-body">
+                        <span class="author">出身地</span>
+                        <p>東京</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="detail-txt-body">
+                    
+                        <span class="author">言語</span>
+                    <p>    
+                        <span class="tag-style">日本語</span>
+                        <span class="tag-style">英語</span>
+                        <span class="tag-style">中国語</span>
+                    </p>    
+                    </div>
+                </li>
+            </ul>
+          </div>
+          
+          <div class="animated fadeinup delay-5">
+            <ul class="social-area">
+                <li><a href="#"><img src="img/line-icon.svg" alt="Anytimes ライン メッセージ"></a></li>
+                <li><a href="#"><img src="img/fbm-icon.svg" alt="Anytimes Facebook メッセージ"></a></li>
+                <li><a href="#"><img src="img/fb-icon.svg" alt="Anytimes Facebook シェア"></a></li>
+                <li><a href="#"><img src="img/googleplus-icon.svg" alt="Anytimes Google Plus"></a></li>
+                <li><a href="#"><img src="img/tw-icon.svg" alt="Anytimes Twitter シェア"></a></li>
+                <li><a href="#"><img src="img/mail-icon.svg" alt="Anytimes メールシェア"></a></li>
+            </ul>
+          </div>
+        
+        </div>
+        
+        <div id="profile-commnet">
+            <!-- Comments -->
+          <div class="comments">
+            <h3><span>3</span>レビューコメント</h3>
+            <ul class="comments-list">
+              <li>
+                <img src="img/avatar/avatar2.jpg" alt="" class="avatar circle">
+                <div class="comment-body">
+                  <span class="author uppercase">ちか</span>
+                  <span class="date">2016.8.12</span>
+                  <div class="comment-title clearfix">英語を教えてください</div>
+                  <p>サポートの機会を与えて頂き、ありがとうございました。 またいつでもご相談ください。 精一杯ご協力させて頂きます。</p>
+                  <p class="star">
+                      <i class="material-icons">star</i>
+                      <i class="material-icons">star</i>
+                      <i class="material-icons">star</i>
+                      <i class="material-icons">star_border</i>
+                      <i class="material-icons">star_border</i>
+                  </p>
+                </div>
+              </li>
+              <li>
+                <img src="img/avatar/avatar1.jpg" alt="" class="avatar circle">
+                <div class="comment-body">
+                  <span class="author uppercase">Heno</span>
+                  <span class="date">2016.8.02</span>
+                  <div class="comment-title clearfix">ポケモンやりましょ！</div>
+                  <p>ありがとうございました。とても丁寧な仕事でした！</p>
+                  <p class="star">
+                      <i class="material-icons">star</i>
+                      <i class="material-icons">star</i>
+                      <i class="material-icons">star</i>
+                      <i class="material-icons">star_border</i>
+                      <i class="material-icons">star_border</i>
+                  </p>
+                </div>
+              </li>
+              <li>
+                <img src="img/avatar/avatar3.jpg" alt="" class="avatar circle">
+                <div class="comment-body">
+                  <span class="author uppercase">Yoh</span>
+                  <span class="date">2016.7.12</span>
+                  <div class="comment-title clearfix">自転車の乗り方ほを教えてください</div>
+                  <p>ありがとうございました。</p>
+                  <p class="star">
+                      <i class="material-icons">star</i>
+                      <i class="material-icons">star</i>
+                      <i class="material-icons">star</i>
+                      <i class="material-icons">star_border</i>
+                      <i class="material-icons">star_border</i>
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+      
+        
+        <div class="create-task">
+            <p>
+                <a href="#" class="waves-effect waves-light z-depth-0">指名して頼む</a>
+            </p>
+        </div>
+        
+  
+
+          
+    
+    </div><!-- /Content -->
+</div> <!-- /Main Container -->
+    
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="js/jquery.swipebox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>   
+<script src="js/swiper.min.js"></script>  
+<script src="js/jquery.mixitup.min.js"></script>
+<script src="js/masonry.min.js"></script>
+<script src="js/chart.min.js"></script>
+<script src="js/functions.js"></script>
+
+  </body>
+</html>

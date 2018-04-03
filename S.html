@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>Anytimes</title>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="x-ua-compatible">
+    <meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width, minimal-ui" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" media="all" rel="stylesheet" type="text/css">
+    <link rel="icon" href="img/anytimes.ico">
+    <!-- Styles -->
+    <link href="css/keyframes.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <link href="css/swiper.css" rel="stylesheet" type="text/css">
+    <link href="css/swipebox.min.css" rel="stylesheet" type="text/css">
+    <link href="css/anytimes.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="m-scene" id="main"> <!-- Main Container -->
+    <!-- Modal Structure Bottom Sheet -->
+    <div id="modal-launch" class="modal bottom-sheet modal-create">
+        <div class="create-modal">
+            <ul>
+                <li><a href="#" class="waves-effect waves-light z-depth-0">コメントをする</a></li>
+                <li><a href="#modal-gavel" class="waves-effect waves-light z-depth-0 modal-trigger">応募してみる</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Modal Structure -->
+    <div id="modal-gavel" class="modal any-modal modal-fixed-footer">
+        <div class="modal-content modal-make-form">
+            <div class="notify-header">
+                <div class="unknow-avatar anytimes-color">
+                    <span><i class="material-icons">local_library</i></span>
+                </div>
+                <div class="notify-author">
+                    <span>応募について</span>
+                    <span class="small">応募後、メッセージで依頼者と仕事内容のすり合わせをします。選ばれるようにがんばりましょう！</span>
+                </div>
+            </div>
+            <form>
+                <div class="modal-form">
+                    <div class="input-field">
+                        <i class="prefix font">¥</i>
+                        <input id="text_jpy" type="number" class="validate">
+                        <label for="text_jpy">あなたの希望金額</label>
+                    </div>
+                    <p><em>・</em><span>システム手数料15％、振込手数料が契約金額から引かれます</span></p>
+                    <p class="m-b-30"><em>・</em><span>交通費・雑費等は全て含んだ合計金額を記載してください</span></p>
+                    <div class="input-field">
+                        <i class="material-icons prefix material-icons-font">mode_edit</i>
+                        <textarea id="textarea1" class="materialize-textarea"></textarea>
+                        <label for="textarea1">メッセージ</label>
+                    </div>
+                    <p><em>・</em><span>メールアドレスや電話番号などの連絡先の交換は禁止となっております</span></p>
+                    <p class="m-b-10"><em>・</em><span>応募をすることで、あなたが利用規約に同意し、お仕事を受けた場合、最後まで完了させることに同意したとみなします</span></p>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer any-footer-modal">
+            <button class="btn waves-effect waves-light primary-color" type="submit" name="action">応募してみる<i class="material-icons right">send</i></button>
+        </div>
+    </div>
+    
+    <div id="modal-comment" class="modal any-modal-comment modal-fixed-footer">
+        <div class="modal-content modal-make-form">
+            <div class="comment-header">
+                <div class="unknow-avatar primary-color">
+                    <span><i class="material-icons">bubble_chart</i></span>
+                </div>
+                <div class="comment-author">
+                    <span>コメント</span>
+                </div>
+            </div>
+            <form>
+                <div class="modal-form">
+
+                    <div class="input-field">
+                        <i class="material-icons prefix material-icons-font">mode_edit</i>
+                        <textarea id="textarea-comment" class="materialize-textarea"></textarea>
+                        <label for="textarea-comment">メッセージ</label>
+                    </div>
+                   
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer any-footer-modal">
+            <button class="btn waves-effect waves-light primary-color" type="submit" name="action">コメントをする<i class="material-icons right">send</i></button>
+        </div>
+    </div>
+
+    <!------------m^^m------------ Page Content ------------o^^o------------>
+    <div id="content">
+
+        <!-- Toolbar -->
+        <header class="toolbar-move-sub anytimes-nav box-shad-none">
+            <a class="open-left" href="a.html">
+                <i class="material-icons">arrow_back</i>
+            </a>
+            <span class="title none detail-header-txt">戻る</span>
+            <div class="open-right">
+                <a href="#" class="like-btn"><i class="material-icons">favorite_border</i></a>
+                <!--<a href="#" class="like-btn active"><i class="material-icons">favorite</i></a>-->
+            </div>
+        </header>
+        
+        <!------------m^^m------------ profile Header Top------------o^^o------------>
+        <div class="h-banner animated fadeindown">
+            <div class="parallax bg-detail">
+                <div class="task-profile animated fadein delay-1"> 
+                    <div class="task-header">
+                        <a href="#"><img class="avatar circle" src="img/avatar/avatar4.jpg" alt=""></a>
+                        <div class="task-author">
+                            <span class="task-name">yoh</span>
+                            <span class="small task-title">犬のお散歩とえさやりを依頼します！</span>
+                            <span class="money"><em>¥</em>5,000</span>
+                        </div>
+                    </div>
+                </div>
+                <span class="stats-detail">募集中</span>
+            </div>
+        </div>
+        
+        <div class="count-box clearfix">
+            <div class="card-count animated fadeinup delay-2">
+                <div class="c-widget">
+                    <div class="c-widget-figure any-white">
+                        <i class="material-icons anyblue">sentiment_satisfied</i>
+                    </div>
+                    <div class="c-widget-body">
+                        <p class="m-0">3 人</p>
+                        <p class="small m-0">いいね！</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-count animated fadeinup delay-2">
+                <div class="c-widget">
+                    <div class="c-widget-figure any-white">
+                        <i class="material-icons anypink">sentiment_very_satisfied</i>
+                    </div>
+                    <div class="c-widget-body">
+                        <p class="m-0">0 人</p>
+                        <p class="small m-0">やります</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+          
+        <div class="animated fadeinup delay-2 category-detail-box clearfix">
+            <h3 class="category-txt"><i class="material-icons">pets</i>ペット</h3>
+            <ul>
+                <li class="chip"><img src="img/category/c/1.jpg" alt="">ペットケア</li>
+                <li class="chip"><img src="img/category/c/3.jpg" alt="">お散歩</li>
+                <li class="chip"><img src="img/category/c/6.jpg" alt="">えさやり</li>
+            </ul>
+        </div>
+          
+        <!-- Deatil info -->
+        <div class="detail-txt-area animated fadeinup delay-3">
+            <h3>依頼情報</h3>
+            <ul class="detail-txt-list">
+                <li>
+                    <div class="detail-txt-body">
+                        <span class="author">地域</span>
+                        <p>東京都世田谷区 クロスロード 12-5-2 305</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="detail-txt-body">
+                        <span class="author">日時</span>
+                        <p>いつでも</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="detail-txt-body">
+                        <span class="author">所要時間</span>
+                        <p>1時間</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+          
+        <div class="detail-txt-area animated fadeinup delay-4">
+            <h3>依頼詳細</h3>
+            <p class="detail-txt-info">
+            オフィスのインテリアに特別なスキルを持っ方は気楽に応募してください！
+            </p>
+        </div>
+        
+        <div class="detail-txt-area animated fadeinup delay-5">
+            <h3>コメント<span class="comment-btn"><a class="btn-flat anytime-btn-blue-border modal-trigger" href="#modal-comment">コメントをする</a></span></h3>
+            <div class="comment-user clearfix">
+                <ul>
+                    <li class="clearfix">
+                        <span class="comment-time">3日前<a href="#">通報</a></span>
+                        <div class="comment-profile"><a href=""><img src="img/avatar/avatar4.jpg" alt="" class="img-circle"></a></div>
+                        <div class="comment-info">
+                            <p class="comment-name">yoh</p>
+                        </div>
+                        <p class="comment-detail">オフィスのインテリアに特別なスキルを持っ方は気楽に応募してください！て何？</p>
+                    </li>
+                    <li class="clearfix">
+                        <span class="comment-time">4日前<a href="#">通報</a></span>
+                        <div class="comment-profile"><a href=""><img src="img/avatar/avatar1.jpg" alt="" class="img-circle"></a></div>
+                        <div class="comment-info">
+                            <p class="comment-name">ヒョノ</p>
+                        </div>
+                        <p class="comment-detail">知らない！</p>
+                    </li>
+                    <li class="clearfix">
+                        <span class="comment-time">5日前<a href="#">通報</a></span>
+                        <div class="comment-profile"><a href=""><img src="img/avatar/avatar2.jpg" alt="" class="img-circle"></a></div>
+                        <div class="comment-info">
+                            <p class="comment-name">chika</p>
+                        </div>
+                        <p class="comment-detail">げんかしないで！</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+          
+        <!-- Footer Detail-->
+        <footer class="footer-box">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        <p class="center-align"><span class="anypink">ANY</span><span class="anyblue">TIMES</span>安心への取り組み</p>
+                        <p class="center-align anytims-law">お金は仕事前に事務局に支払われ、評価後に振り込まれます。</p>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="warning-box"><span>通報</span></a>
+        </footer>
+          
+        <!-- Floating Action Button -->
+        <div class="floating-button page-fab animated bouncein delay-3">
+            <a class="btn-floating btn-large waves-effect waves-light accent-color btn z-depth-1 modal-trigger" href="#modal-launch">
+                <i class="material-icons"><i class="material-icons">launch</i></i>
+            </a>
+        </div>
+    
+    </div><!-- /Content -->
+</div> <!-- /Main Container -->
+    
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="js/jquery.swipebox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>   
+<script src="js/swiper.min.js"></script>  
+<script src="js/jquery.mixitup.min.js"></script>
+<script src="js/masonry.min.js"></script>
+<script src="js/chart.min.js"></script>
+<script src="js/functions.js"></script>
+
+  </body>
+</html>
